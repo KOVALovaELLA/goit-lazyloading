@@ -1,0 +1,71 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul.feed {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+}
+
+.feed__item {
+    width: 80%;
+    /* To make each item take roughly half of the container width */
+    margin-bottom: 20px;
+    /* background-color: #f0f0f0; */
+    /* Add a background color for visual separation */
+   /*  border: 1px solid #ccc; */
+    /* Add a border for style */
+    padding: 20px;
+    /* Add padding for spacing between items */
+    box-sizing: border-box;
+    /* Include padding in the item's total width */
+    display: flex;
+    /* Make the item a flex container */
+    flex-direction: column;
+    /* Stack the image and text vertically */
+    text-align: center;
+    /* Center-align text */
+    justify-content: center;
+    align-items: center;
+}
+
+.feed__item img {
+    max-width: 100%;
+    /* Ensure images don't exceed their container's width */
+    height: auto;
+    /* Maintain image aspect ratio */
+    margin-bottom: 10px;
+    /* Add some spacing between image and text */
+}
+
+.feed__item p {
+    flex-grow: 1;
+    /* Make the text expand to fill the available space */
+    overflow: hidden;
+    /* Hide text overflow */
+    text-overflow: ellipsis;
+    /* Add ellipsis for long text */
+}
+
+p{
+    font-size: 24px;
+}
+
+.feed img{
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all  500ms linear 500ms;
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+}
+.feed img.appear{
+    transform: translateX(0);
+    opacity:1 ;
+}
